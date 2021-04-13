@@ -1,6 +1,7 @@
 import React from 'react';
 import useStats from '../hooks/useStats';
 import CardComponent from './Card';
+import '../styles/Cards.css';
 
 function Cards({ url }) {
   const { stats, loading, error } = useStats(url);
@@ -9,23 +10,23 @@ function Cards({ url }) {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error...</p>;
   return (
-    <div className="">
+    <div className="container">
         <CardComponent
-          className=""
+          className="infected"
           cardTitle="Infected"
           value={stats.confirmed.value}
           lastUpdate={stats.lastUpdate}
           cardSubtitle="Number of active cases from COVID-19."
         />
         <CardComponent
-          className=""
+          className="recovered"
           cardTitle="Recovered"
           value={stats.recovered.value}
           lastUpdate={stats.lastUpdate}
           cardSubtitle="Number of recoveries from COVID-19."
         />
         <CardComponent
-          className=""
+          className="deaths"
           cardTitle="Deaths"
           value={stats.deaths.value}
           lastUpdate={stats.lastUpdate}

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import useStats from '../hooks/useStats';
+import '../styles/CountryPicker.css';
 
 const URL_BASE = 'https://covid19.mathdro.id/api';
 const URL_COUNTRIES = 'https://covid19.mathdro.id/api/countries';
