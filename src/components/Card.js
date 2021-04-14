@@ -1,12 +1,13 @@
 import React from 'react';
+import '../styles/Card.css';
 
 function CardComponent ({ className, cardTitle, value, lastUpdate, cardSubtitle }) {
     return (
     <div className={className}>
-      <h1>{cardTitle}</h1>
-        <h2>{value}</h2>
-        <h3>{new Date(lastUpdate).toDateString()}</h3>
-        <p>{cardSubtitle}</p>
+      <div className= "title">{cardTitle}</div>
+        <div className= "value">{value.toLocaleString()}</div>
+        <div className= "date">{new Date(lastUpdate).toDateString()}</div>
+        <div className= "subTitle">{cardSubtitle}</div>
     </div>
     );
 };
