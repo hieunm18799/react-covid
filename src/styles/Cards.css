@@ -1,43 +1,44 @@
-.container {
+.cards-container {
     display: flex;
     /* flex-direction: column; */
     justify-content: center;
     align-items: center;
     margin: 50px 0;
+}
+@media only screen and (max-width: 770px) {
+  .cards-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
   }
+}
   
-  .infected {
-    /* border-bottom: 10px solid rgba(0, 0, 255, 0.5); */
-    border: 3px solid rgba(0, 0, 255, 0.5);
-    margin: 0 2% !important;
-    padding: 5px 10px;
-    /* background-color: rgb(238, 230, 230); */
-  }
+.infected {
+  /* border-bottom: 10px solid rgba(0, 0, 255, 0.5); */
+  border: 3px solid rgba(0, 0, 255, 0.5);
+  /* background-color: rgb(238, 230, 230); */
+}
   
-  .infected:hover {
-    box-shadow: 10px 10px 5px #aaa;
-  }
+.infected:hover {
+ box-shadow: 10px 10px 5px #aaa;
+}
 
-  .recovered{
-    /* border-bottom: 10px solid rgba(0, 255, 0, 0.5); */
-    border: 3px solid rgba(0, 255, 0, 0.5);
-    margin: 0 2% !important;
-    padding: 5px 10px;
-  }
+.recovered{
+  /* border-bottom: 10px solid rgba(0, 255, 0, 0.5); */
+  border: 3px solid rgba(0, 255, 0, 0.5);
+}
 
-  .recovered:hover {
-    box-shadow: 10px 10px 5px #aaa;
-  }
+.recovered:hover {
+  box-shadow: 10px 10px 5px #aaa;
+}
   
-  .deaths{
-    /* border-bottom: 10px solid rgba(255, 0, 0, 0.5); */
-    border: 3px solid rgba(255, 0, 0, 0.5);
-    margin: 0 2% !important;
-    padding: 5px 10px;
-  }
+.deaths{
+  /* border-bottom: 10px solid rgba(255, 0, 0, 0.5); */
+  border: 3px solid rgba(255, 0, 0, 0.5);
+}
 
-  .deaths:hover {
-    box-shadow: 10px 10px 5px #aaa;
-  }
+.deaths:hover {
+  box-shadow: 10px 10px 5px #aaa;
+}
 
   

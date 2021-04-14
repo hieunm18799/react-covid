@@ -20,8 +20,8 @@ function CountryPicker({ handleCountryChange }) {
   return (
 
     <div>
-    <h2>Currently Showing: {selectedCountry}</h2>
-    <select className="" defaultValue="" onChange={handleChange}>
+    <h2 className="text-show">Currently Showing: {selectedCountry}</h2>
+    <select className="formControl" defaultValue="" onChange={handleChange}>
     <option value={DEFAULT_COUNTRY}>{DEFAULT_COUNTRY}</option>
         {countries.countries.map((country) => country.name).map((country, i) => <option key={i} value={country}>{country}</option>)}
       </select>

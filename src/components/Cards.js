@@ -10,7 +10,7 @@ function Cards({ url }) {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error...</p>;
   return (
-    <div className="container">
+    <div className="cards-container">
         <CardComponent
           className="infected"
           cardTitle="Infected"
