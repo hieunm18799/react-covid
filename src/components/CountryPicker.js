@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import useStats from '../hooks/useStats';
 import '../styles/CountryPicker.css';
 
-const URL_BASE = 'https://covid19.mathdro.id/api';
 const URL_COUNTRIES = 'https://covid19.mathdro.id/api/countries';
 const DEFAULT_COUNTRY = 'Global';
 
@@ -12,8 +11,8 @@ function CountryPicker({ handleCountryChange }) {
 
   const handleChange = e => {
     setSelectedCountry(e.target.value);
-    if (e.target.value != DEFAULT_COUNTRY) handleCountryChange(`${URL_COUNTRIES}/${e.target.value}`);
-    else handleCountryChange(URL_BASE);
+    if (e.target.value != DEFAULT_COUNTRY) handleCountryChange(e.target.value);
+    else handleCountryChange('');
   }
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error...</p>;

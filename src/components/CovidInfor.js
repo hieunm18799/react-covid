@@ -9,8 +9,9 @@ const URL_BASE = 'https://covid19.mathdro.id/api';
 
 function CovidInfor() {
   const [url, setUrl] = useState(URL_BASE);
-  const handleCountryChange = urlCountry => {
-    setUrl(urlCountry);
+  const handleCountryChange = country => {
+    if (country != '') setUrl(`${URL_BASE}/countries/${country}`);
+    else setUrl(URL_BASE);
   }
 
 
